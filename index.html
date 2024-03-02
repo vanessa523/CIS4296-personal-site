@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<style>
+    .bg-purple{
+      background-color:rgb(189, 38, 249);
+      color:purple;
+    }
+    .text-purple{
+      color:rgb(193, 60, 234);
+    }
+    .bg-lavendar{
+      background-color: rgb(239, 224, 252);
+    }
+    .text-white{
+      color:white;
+    }
+    .text-blue{
+      color:rgb(221, 250, 249);
+    }
+    .text-myFont{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+
+</style>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -25,91 +48,56 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
     <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
+    
 
-    <link href="styles/theme.css" rel="stylesheet" />
+    
     <link href="styles/styles.css" rel="stylesheet" />
 
     <!-- Set Page Title Here -->
     <title></title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
-      <div class="container-fluid p-2 px-lg-2 py-lg-0">
-        <!-- Set Name Here -->
-        <a class="navbar-brand" href="#"></a>
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#projects"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#courses"
-                >Courses</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#contact"
-                >Contact</a
-              >
-            </li>
+  <body class="bg-lavendar text-myFont">
+    <nav class="navbar navbar-expand-lg bg-purple fixed-top text-blue">     
+           Vanessa Renzi
+        <div class="dropdown">
+          <a class="btn btn-primary text-white dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Page
+          </a>   
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#home">home</a></li>
+            <li><a class="dropdown-item" href="#summary">summary</a></li>
+            <li><a class="dropdown-item" href="#projects">projects</a></li>
+            <li><a class="dropdown-item" href="#courses">courses</a></li>
+            <li><a class="dropdown-item" href="#contact">contact</a></li>
           </ul>
+
         </div>
-      </div>
-    </nav>
+        </nav>
     <div
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center pt-5"
       id="home"
     >
       <div
-        class="rounded-circle border border-3 border-primary p-1 mb-3 mt-0 mt-lg-5"
-      >
+        class="rounded-circle border border-3 border-primary p-1 mb-3 mt-0 mt-lg-5">
       <!-- Set Photo Here -->
         <img
           style="height: 150px; width: 150px"
           class="rounded-circle"
           draggable="false"
           id="profilepic"
+          src="https://media.licdn.com/dms/image/D5603AQGUZB2cdVJU9w/profile-displayphoto-shrink_100_100/0/1697306781994?e=1714608000&v=beta&t=JVHqd6A0jHyKgbLqaXRqXkdFnI7oRUy7x0ihbJt7Lv0"
         />
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
           Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
-          <span id="name"></span>!
+          <span id="name"></span>Vanessa Renzi
         </h4>
       </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-center text-opacity-75 text-primary">
+      <div class="row mx-auto text-purple">
+        <h5 class="h5 mx-auto text-center text-opacity-75 ">
           Information Science & Technology Student at Temple University
         </h5>
       </div>
@@ -120,22 +108,6 @@
             data-bs-toggle="tooltip"
             data-placement="top"
             title="Python"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/angular.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="Angular"
-          />
-        </div>
-        <div class="col text-center">
-          <img
-            src="images/typescript.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="TypeScript"
           />
         </div>
 
@@ -182,14 +154,42 @@
         </div>
         <div class="col text-center">
           <img
-            src="images/mongodb.jpg"
+            src="images/HTML.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="MongoDB"
+            title="HTML"
           />
         </div>
       </div>
-
+      <div class="row mt-3 next">
+      <a href="#summary" class="text-center"
+            ><iconify-icon
+              icon="material-symbols:arrow-circle-down"
+              class="arrow-next"
+            ></iconify-icon
+          ></a>
+        </div>
+      </div>
+      <div
+      class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
+      id="summary"
+    >
+    <div class="row mx-auto">
+      <h4 class="h1 font-weight-bold mx-auto text-center">Summary</h4>
+    </div>
+    <div class="row mx-auto text-purple">
+      <h5 class="h5 mx-auto text-opacity-75 text-center mb-4">
+        Let's start with a little more about me
+      </h5>
+    </div>
+    <div class="row w-100 mb-4 justify-content-center">
+      <p class="text-justify justify-content-center">
+        I'm currently a senior at Temple University, pursuing a Bachelors of Science in Information Science & Technology.
+        My expected graduation date is December, 2024. My passion leans more into front end design, but I do love
+        a challenging back end coding project as well! Searching for all types of opportunities to continue to 
+        expand my knowledge on a variety of topics, both tech and non-tech related.
+      </p>
+    </div>
       <div class="row mt-3 mt-lg-5 next">
         <a href="#projects" class="col"
           ><iconify-icon
@@ -198,7 +198,8 @@
           ></iconify-icon
         ></a>
       </div>
-    </div>
+    </div>  
+  </div>
     <div
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center"
       id="projects"
@@ -206,51 +207,30 @@
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">Projects</h4>
       </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
+      <div class="row mx-auto text-purple">
+        <h5 class="h5 mx-auto text-opacity-75 text-center mb-4">
           I've worked on some neat things.
         </h5>
       </div>
       <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
+        <h5>Team Capstone Project</h5>
       </div>
       <div class="row w-100 mb-4">
         <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
+          Designing a system used for storing and accessing other future student capstone projects.
+          Split up into admin and student users, includes functions such as admin tasks to assign and
+          manage student project teams as well as students uploading and submitting documents to the filing
+          system, among other things.
         </p>
       </div>
       <div class="row w-100">
         <h5>Query Dating Site</h5>
       </div>
-      <div class="row w-100">
+      <div class="row w-100 mb-4">
         <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
+          In the spirit of Valentines Day, my current coursework is building a
+          functional dating website with the abilities to like, match, and go on
+          dates with other users within the database system.  
         </p>
       </div>
       <div class="row mt-3 next">
@@ -269,8 +249,8 @@
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">Courses</h4>
       </div>
-      <div class="row mx-auto mb-4">
-        <h5 class="h5 mx-auto text-center text-primary text-opacity-75">
+      <div class="row mx-auto mb-4 text-purple">
+        <h5 class="h5 mx-auto text-center text-opacity-75">
           Not as tasty as a main course, but close.
         </h5>
       </div>
@@ -342,13 +322,13 @@
           Feel Like Reaching Out?
         </h4>
       </div>
-      <div class="row mx-auto">
-        <h5 class="h5 mx-auto text-opacity-75 text-primary text-center">
-          I don't bite.
-        </h5>
+      <div class="row mx-auto text-purple">
+        <div class="alert alert-warning">
+          <strong>Warning!</strong> I might bite.
+        </div>
       </div>
       <div class="row my-4 contact-wrapper gap-3">
-        <a href="mailto:johndoe@gmail.com" class="col text-black">
+        <a href="tun32988@temple.edu" class="col text-black">
           <iconify-icon
             icon="logos:google-gmail"
             width="60"
@@ -358,7 +338,7 @@
             title="Email"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/johndoe/" class="col"
+        <a href="https://www.linkedin.com/in/vanessa-renzi-b0302b176/" class="col"
           ><iconify-icon
             icon="skill-icons:linkedin"
             width="60"
@@ -368,7 +348,7 @@
             title="LinkedIn"
           ></iconify-icon>
         </a>
-        <a href="https://github.com/johndoe" class="col"
+        <a href="https://github.com/vanessa523" class="col"
           ><iconify-icon
             icon="skill-icons:github-dark"
             width="60"
